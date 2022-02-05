@@ -3,7 +3,7 @@
 # Will discard all NULL or zero values, there are other ways of treating this values
 # Will return None if no values or the geometric mean of the non-zero values
 # USAGE: sqliteConnection.create_aggregate("g_avg", 1, GeometricAvg)
-#        cursor.execute("SELECT g_avg(value) FROM data')
+#        cursor.execute('SELECT g_avg(value) FROM data')
 
 class GeometricAvg:
     def __init__(self):
