@@ -1,7 +1,7 @@
 # Class for defining an aggregate function to calculate 
 # the geometric average of the selected values in a sqlite db
-# Will discard all NULL or zero values, there are other ways of treating this values
-# Will return None if no values or the geometric mean of the non-zero values
+# Will discard all NULL or zero or negative values, there are other ways of treating this values
+# Will return None if no positive values
 # USAGE: sqliteConnection.create_aggregate("g_avg", 1, GeometricAvg)
 #        cursor.execute('SELECT g_avg(value) FROM data')
 
